@@ -17,6 +17,7 @@ body,
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    min-height: 100vh;
 }
 
 //~~~~~~~~~~~~ TYPOGRAPHY ~~~~~~~~~~~~~~~~~~~
@@ -45,22 +46,20 @@ body {
     text-align: center;
 
     @media screen and (min-width: $min-width) {
+        background: $color-primary url("../images/bg-desktop.svg") left bottom
+            no-repeat;
         .flex-container {
             display: flex;
             align-items: flex-start;
         }
         .container--right {
             text-align: left;
-            margin: 4rem 6rem 0 4rem;
-        }
-
-        .title {
-            margin-right: 3rem;
-            font-size: 4rem;
+            margin: 4rem 4rem 0 0;
         }
 
         .container--left {
             min-width: 55%;
+            margin-right: 4rem;
         }
     }
 }
@@ -68,8 +67,9 @@ body {
 .content-wrapper {
     padding: 3rem 4rem;
     margin: 0 auto;
+    position: relative;
     @media screen and (min-width: $min-width) {
-        padding: 4rem 5rem;
+        padding: 4rem 6rem 2rem 6rem;
     }
 }
 
@@ -83,6 +83,9 @@ body {
 
     &__img {
         width: 12rem;
+        @media screen and (min-width: $min-width) {
+            width: 18rem;
+        }
     }
 }
 //~~~~~~~~~~~~ MOCKUPS IMAGE ~~~~~~~~~~~~~~~~~~~~~
@@ -93,6 +96,10 @@ body {
 //~~~~~~~~~~~~ TEXT CONTENT ~~~~~~~~~~~~~~~~~~~~~
 .title {
     margin-bottom: 2rem;
+    @media screen and (min-width: $min-width) {
+        margin-right: 3rem;
+        font-size: 4rem;
+    }
 }
 
 .maintext {
@@ -133,9 +140,11 @@ body {
 }
 
 //~~~~~~~~~~~~ FOOTER ICONS ~~~~~~~~~~~~~~~~~~~~~
-.social {
+.social__wrapper {
     @media screen and (min-width: $min-width) {
         text-align: right;
+        margin-right: 6rem;
+        margin-top: 2rem;
     }
 }
 .social__icon {

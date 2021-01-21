@@ -9,6 +9,7 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 62.5%;
+  min-height: 100vh;
 }
 
 h1,
@@ -36,6 +37,9 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
+  body {
+    background: #674baf url("../images/bg-desktop.svg") left bottom no-repeat;
+  }
   body .flex-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -46,25 +50,23 @@ body {
   }
   body .container--right {
     text-align: left;
-    margin: 4rem 6rem 0 4rem;
-  }
-  body .title {
-    margin-right: 3rem;
-    font-size: 4rem;
+    margin: 4rem 4rem 0 0;
   }
   body .container--left {
     min-width: 55%;
+    margin-right: 4rem;
   }
 }
 
 .content-wrapper {
   padding: 3rem 4rem;
   margin: 0 auto;
+  position: relative;
 }
 
 @media screen and (min-width: 1200px) {
   .content-wrapper {
-    padding: 4rem 5rem;
+    padding: 4rem 6rem 2rem 6rem;
   }
 }
 
@@ -80,6 +82,12 @@ body {
   width: 12rem;
 }
 
+@media screen and (min-width: 1200px) {
+  .header__img {
+    width: 18rem;
+  }
+}
+
 .mockups {
   width: 100%;
   margin-bottom: 6rem;
@@ -87,6 +95,13 @@ body {
 
 .title {
   margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .title {
+    margin-right: 3rem;
+    font-size: 4rem;
+  }
 }
 
 .maintext {
@@ -133,8 +148,10 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-  .social {
+  .social__wrapper {
     text-align: right;
+    margin-right: 6rem;
+    margin-top: 2rem;
   }
 }
 
