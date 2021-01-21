@@ -1,6 +1,7 @@
 //~~~~~~~~~~~~ VARIABLES ~~~~~~~~~~~~~~~~~
 $color-primary: rgb(103, 75, 175);
 $color-secondary: hsl(300, 69%, 71%);
+$min-width: 1200px;
 
 //breakpoints
 //Mobile: 375px
@@ -42,12 +43,34 @@ body {
     background-size: 100%;
     color: #fff;
     text-align: center;
+
+    @media screen and (min-width: $min-width) {
+        .flex-container {
+            display: flex;
+            align-items: flex-start;
+        }
+        .container--right {
+            text-align: left;
+            margin: 4rem 6rem 0 4rem;
+        }
+
+        .title {
+            margin-right: 3rem;
+            font-size: 4rem;
+        }
+
+        .container--left {
+            min-width: 55%;
+        }
+    }
 }
 
 .content-wrapper {
     padding: 3rem 4rem;
-    //   width: 380px;
     margin: 0 auto;
+    @media screen and (min-width: $min-width) {
+        padding: 4rem 5rem;
+    }
 }
 
 //~~~~~~~~~~~~ HEADER LOGO ~~~~~~~~~~~~~~~~~~
@@ -79,18 +102,23 @@ body {
 
 //~~~~~~~~~~~~ BUTTON ~~~~~~~~~~~~~~~~~~~~~
 .register {
-    padding: 1rem 8rem;
+    padding: 1.5rem 8rem;
     border-radius: 50px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
     background-color: #fff;
     margin-bottom: 5rem;
     color: $color-primary;
-
+    @media screen and (min-width: $min-width) {
+        padding: 2rem 7rem;
+    }
 
     &__text {
         font-family: "Poppins", sans-serif;
         font-weight: 400;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+        @media screen and (min-width: $min-width) {
+            font-size: 1.5rem;
+        }
     }
 
     &:active {
@@ -102,32 +130,34 @@ body {
         background-color: $color-secondary;
         color: #fff;
     }
-    &:hover {
-        transform: translateY(-1px);
-    }
 }
 
 //~~~~~~~~~~~~ FOOTER ICONS ~~~~~~~~~~~~~~~~~~~~~
 .social {
-    &__icon {
-        color: #fff;
-        border: solid #fff 1px;
-        padding: 5px 2.5px 0;
-        border-radius: 50%;
-        display: inline-block;
-        width: 28px;
-        height: 28px;
-        &:not(:last-child) {
-            margin-right: 1rem;
-        }
-
-        &:hover,
-        &:focus {
-            border-color: $color-secondary;
-            color: $color-secondary;
-        }
+    @media screen and (min-width: $min-width) {
+        text-align: right;
     }
 }
+.social__icon {
+    color: #fff;
+    border: solid #fff 1px;
+    padding: 5px 2.5px 0;
+    border-radius: 50%;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    &:not(:last-child) {
+        margin-right: 1rem;
+    }
+
+    &:hover,
+    &:focus {
+        border-color: $color-secondary;
+        color: $color-secondary;
+    }
+}
+
 .fab {
     font-size: 1.5rem;
     text-align: center;

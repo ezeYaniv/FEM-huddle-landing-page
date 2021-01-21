@@ -35,9 +35,37 @@ body {
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  body .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  body .container--right {
+    text-align: left;
+    margin: 4rem 6rem 0 4rem;
+  }
+  body .title {
+    margin-right: 3rem;
+    font-size: 4rem;
+  }
+  body .container--left {
+    min-width: 55%;
+  }
+}
+
 .content-wrapper {
   padding: 3rem 4rem;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .content-wrapper {
+    padding: 4rem 5rem;
+  }
 }
 
 .header {
@@ -67,7 +95,7 @@ body {
 }
 
 .register {
-  padding: 1rem 8rem;
+  padding: 1.5rem 8rem;
   border-radius: 50px;
   -webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
@@ -76,10 +104,22 @@ body {
   color: #674baf;
 }
 
+@media screen and (min-width: 1200px) {
+  .register {
+    padding: 2rem 7rem;
+  }
+}
+
 .register__text {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .register__text {
+    font-size: 1.5rem;
+  }
 }
 
 .register:active {
@@ -92,9 +132,10 @@ body {
   color: #fff;
 }
 
-.register:hover {
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
+@media screen and (min-width: 1200px) {
+  .social {
+    text-align: right;
+  }
 }
 
 .social__icon {
@@ -105,6 +146,7 @@ body {
   display: inline-block;
   width: 28px;
   height: 28px;
+  text-align: center;
 }
 
 .social__icon:not(:last-child) {
