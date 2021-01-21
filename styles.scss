@@ -46,8 +46,10 @@ body {
     text-align: center;
 
     @media screen and (min-width: $min-width) {
-        background: $color-primary url("../images/bg-desktop.svg") left bottom
+        background: $color-primary url("../images/bg-desktop.svg") left
             no-repeat;
+            background-size: contain;
+
         .flex-container {
             display: flex;
             align-items: flex-start;
