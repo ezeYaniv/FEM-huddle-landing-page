@@ -1,0 +1,146 @@
+//~~~~~~~~~~~~ VARIABLES ~~~~~~~~~~~~~~~~~
+$color-primary: rgb(103, 75, 175);
+$color-secondary: hsl(300, 69%, 71%);
+
+//breakpoints
+//Mobile: 375px
+// Desktop: 1440px
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body,
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+//~~~~~~~~~~~~ TYPOGRAPHY ~~~~~~~~~~~~~~~~~~~
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    background: $color-primary url("../images/bg-mobile.svg") center top
+        no-repeat;
+    background-size: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+.content-wrapper {
+    padding: 3rem 4rem;
+    //   width: 380px;
+    margin: 0 auto;
+}
+
+//~~~~~~~~~~~~ HEADER LOGO ~~~~~~~~~~~~~~~~~~
+.header {
+    margin-bottom: 6rem;
+
+    &__navbar {
+        text-align: left;
+    }
+
+    &__img {
+        width: 12rem;
+    }
+}
+//~~~~~~~~~~~~ MOCKUPS IMAGE ~~~~~~~~~~~~~~~~~~~~~
+.mockups {
+    width: 100%;
+    margin-bottom: 6rem;
+}
+//~~~~~~~~~~~~ TEXT CONTENT ~~~~~~~~~~~~~~~~~~~~~
+.title {
+    margin-bottom: 2rem;
+}
+
+.maintext {
+    letter-spacing: 0.5px;
+    margin-bottom: 3rem;
+}
+
+//~~~~~~~~~~~~ BUTTON ~~~~~~~~~~~~~~~~~~~~~
+.register {
+    padding: 1rem 8rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    margin-bottom: 5rem;
+    color: $color-primary;
+
+
+    &__text {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-size: 1.2rem;
+    }
+
+    &:active {
+        transform: translateY(1px);
+    }
+
+    &:hover,
+    &:focus {
+        background-color: $color-secondary;
+        color: #fff;
+    }
+    &:hover {
+        transform: translateY(-1px);
+    }
+}
+
+//~~~~~~~~~~~~ FOOTER ICONS ~~~~~~~~~~~~~~~~~~~~~
+.social {
+    &__icon {
+        color: #fff;
+        border: solid #fff 1px;
+        padding: 5px 2.5px 0;
+        border-radius: 50%;
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        &:hover,
+        &:focus {
+            border-color: $color-secondary;
+            color: $color-secondary;
+        }
+    }
+}
+.fab {
+    font-size: 1.5rem;
+    text-align: center;
+    // transform: translateY(4px);
+}
+
+//~~~~~~~~~~~~ ATTRIBUTION ~~~~~~~~~~~~~~~~~~~~~
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+
+    & a {
+        color: hsl(228, 45%, 44%);
+    }
+}

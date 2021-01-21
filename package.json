@@ -1,0 +1,23 @@
+{
+  "name": "huddle-landing",
+  "version": "1.0.0",
+  "description": "![Design preview for the Huddle landing page with single introductory section](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "dependencies": {
+    "sass": "^1.32.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "compile:sass": "sass styles.scss css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ezeYaniv/FEM-huddle-landing-page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ezeYaniv/FEM-huddle-landing-page/issues"
+  },
+  "homepage": "https://github.com/ezeYaniv/FEM-huddle-landing-page#readme"
+}
